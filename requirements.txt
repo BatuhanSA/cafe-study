@@ -1,4 +1,4 @@
 autograder-py==1.0.2
 edq-utils==1.0.3
 
-./packages/cafe
+git+https://github.com/aiea-lab/cafe.git@main

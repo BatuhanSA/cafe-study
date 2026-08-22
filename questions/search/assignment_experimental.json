@@ -1,0 +1,9 @@
+{
+    "id": "bfs",
+    "name": "Breadth First Search",
+    "static-files": [
+        "../../requirements.txt",
+        "grader.py",
+        "solution_profile.json"
+    ]
+}

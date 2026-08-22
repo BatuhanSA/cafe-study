@@ -1,0 +1,9 @@
+{
+    "id": "bubble-sort",
+    "name": "Bubble Sort",
+    "static-files": [
+        "../../requirements.txt",
+        "grader.py",
+        "solution_profile.json"
+    ]
+}

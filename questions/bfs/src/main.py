@@ -1,3 +1,4 @@
+# DO NOT MODIFY THIS CLASS
 class Node:
     def __init__(self, label, neighbors = None):
         self.label = label
@@ -19,6 +20,7 @@ class Node:
     def __hash__(self):
         return hash(self.label)
 
+# DO NOT MODIFY THIS CLASS
 class Queue:
     nodes_explored  = 0
     def __init__(self):
@@ -45,5 +47,22 @@ class Queue:
 
         return len(self._items) == 0
 
+# TODO(participant): Debugg the code bellow.
 def BFS(initial_node, goal_node):
-    raise NotImplementedError
+    frontier = Queue()
+
+    if initial_node == goal_node:
+        return []
+
+    frontier.enqueue((list([initial_node.label]), initial_node))
+
+    while (not frontier.is_empty()):
+        (path, node) = frontier.dequeue()
+        for neighbor in node.neighbors:
+            neighbor_path = path + [neighbor.label]
+            if (neighbor == goal_node):
+                return neighbor_path
+
+            frontier.enqueue((neighbor_path, neighbor))
+
+    raise ValueError("No solution Found.")

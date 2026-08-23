@@ -45,7 +45,7 @@ class TC1(autograder.question.Question):
             if (not arr == sorted_arr):
                 feedback += f"The list is not sorted.\nExpected: {sorted_arr}\nActual: {arr}\n"
             else:
-                feedback = f"Wrong efficiency.\n"
+                feedback = f"Wrong number of number of comparisons.\n"
 
             if (cafe.settings.is_generate_feedback_enabled()):
                 feedback += cafe.explainer.generate_feedback(input_dir, BubbleSort, self, "solution_profile.json")

@@ -58,7 +58,7 @@ class TC1(autograder.question.Question):
         if (actual_explored_count == expected_explored_count  and student_path == ["root", "child_1", "grand_child", "goal"]):
             self.full_credit()
         else:
-            feedback = f"Wrong number of nodes expanded.\nExpected: {expected_explored_count}, Actual: {actual_explored_count}\n"
+            feedback = f"Wrong number of nodes expanded.\n"
 
             if (cafe.settings.is_generate_feedback_enabled()):
                 feedback += cafe.explainer.generate_feedback(input_dir, BFS, self, "solution_profile.json")

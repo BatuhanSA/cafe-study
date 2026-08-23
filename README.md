@@ -92,17 +92,17 @@ Eliminating some of these variables make observing whether CAFE helps when debug
 ## Study Flow
 
 Participants will be divided into four approximately equal sized groups, each defined by the task and setup they start with.
-The task is the problem they will debug (BFS or minimax), and the setup is whether they will use CAFE (experimental) or not (control).
+The task is the problem they will debug (search or sort), and the setup is whether they will use CAFE (experimental) or not (control).
 In the first round, participants will debug their groups assigned task with their groups given setup.
 In the second round, they will switch to the opposite of both: the other task and the other setup.
-Someone who starts on BFS without CAFE will move to minimax with CAFE, and so on.
+Someone who starts on search without CAFE will move to sort with CAFE, and so on.
 
 | Group |     Round 1       |     Round 2       |
 |:-----:|:-----------------:|:-----------------:|
-| 1     | BFS & No CAFE     | Minimax & CAFE    |
-| 2     | BFS & CAFE        | Minimax & No CAFE |
-| 3     | Minimax & No CAFE | BFS & CAFE        |
-| 4     | Minimax & CAFE    | BFS & No CAFE     |
+| 1     | Search & No CAFE  | Sort & CAFE       |
+| 2     | Search & CAFE     | Sort & No CAFE    |
+| 3     | Sort & No CAFE    | Search & CAFE     |
+| 4     | Sort & CAFE       | Search & No CAFE  |
 
 
 These four groups cover every permutation of starting task and starting setup.

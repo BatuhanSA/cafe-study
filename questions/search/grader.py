@@ -47,15 +47,15 @@ class TC1(autograder.question.Question):
         goal.neighbors.append(grand_child)
 
         try:
-            submission.__all__.Queue.nodes_explored = 0
+            submission.__all__.Queue.nodes_expanded = 0
             student_path = student_bfs(root, goal)
         except NotImplementedError:
             self.fail('NotImplementedError')
 
-        expected_explored_count = 4
-        actual_explored_count = submission.__all__.Queue.nodes_explored
+        expected_expanded_count = 4
+        actual_expanded_count = submission.__all__.Queue.nodes_expanded
 
-        if (actual_explored_count == expected_explored_count  and student_path == ["root", "child_1", "grand_child", "goal"]):
+        if (actual_expanded_count == expected_expanded_count  and student_path == ["root", "child_1", "grand_child", "goal"]):
             self.full_credit()
         else:
             feedback = f"Wrong number of nodes expanded.\n"

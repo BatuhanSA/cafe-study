@@ -22,7 +22,7 @@ class Node:
 
 # DO NOT MODIFY THIS CLASS
 class Queue:
-    nodes_explored  = 0
+    nodes_expanded  = 0
     def __init__(self):
         self._items = []
 
@@ -34,12 +34,12 @@ class Queue:
     def enqueue(self, item):
         """ Enqueue the item into the queue. """
 
-        Queue.nodes_explored += 1
         self._items.insert(0, item)
 
     def dequeue(self):
         """ Dequeue the earliest enqueued item still in the queue. """
 
+        Queue.nodes_expanded += 1
         return self._items.pop()
 
     def is_empty(self):

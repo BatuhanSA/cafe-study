@@ -108,3 +108,38 @@ Someone who starts on search without CAFE will move to sort with CAFE, and so on
 These four groups cover every permutation of starting task and starting setup.
 This counterbalancing lets us account for biases such as order effects and differences in task difficulty.
 We expect these biases to average out across the groups.
+
+## Deliverables
+
+- TODO(Batu): Add what we are going to collect form the participants.
+- TODO(Batu): Add email to send to.
+- TODO(Batu): Add the link to the survey (google form)
+
+## Restrictions
+
+To keep the results accurate, please don't use:
+
+- **LLMs / Code Assistant Tools**:
+    This includes ChatGPT, Claude, Gemini, GitHub Copilot, Cursor, or any AI Chat/Autocomplete Tool.
+    *Why: We can not tell if improvement came from CAFE or the AI.*
+
+- **Outside Resources**:
+    This includes web searches, stack overflow, tutorials, or existing BFS/Bubble Sort implementations.
+    *Why: Finding the answer online replaces the debugging we are measuring.*
+
+- **External Help**:
+    This includes talking with fellow participants about the questions.
+    *Why: Outside help interferes with the CAFE vs. No-CAFE comparison.*
+
+- **Solution / Test Cases Inspection**:
+    This study runs on the honor system.
+    If you look around the directories, you'll find the reference solutions and test cases.
+    They are not hidden and they are not hard to find.
+    We're treating you as a collaborator, not an adversary, so we are asking you not to use them.
+    *Why: It defeats the point of the study and invalidates CAFE's feedback*
+
+- **Editing Study Resources**:
+    Edit ONLY `questions/search/src/main.py` and `questions/sort/src/main.py`.
+    Within those files edit only the functions marked with `TODO(participant)`.
+    Leave all other study material alone.
+    *Why: It breaks CAFE and makes the rounds impossible to compare.*

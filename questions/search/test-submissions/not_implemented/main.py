@@ -45,5 +45,5 @@ class Queue:
 
         return len(self._items) == 0
 
-def BFS(initial_node, goal_node):
+def BFS(start_node, goal_node):
     raise NotImplementedError

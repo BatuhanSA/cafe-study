@@ -45,14 +45,14 @@ class Queue:
 
         return len(self._items) == 0
 
-def BFS(initial_node, goal_node):
+def BFS(start_node, goal_node):
     frontier = Queue()
 
-    if initial_node == goal_node:
+    if start_node == goal_node:
         return []
 
-    frontier.enqueue((list([initial_node.label]), initial_node))
-    visited = set({initial_node})
+    frontier.enqueue((list([start_node.label]), start_node))
+    visited = set({start_node})
 
     while (not frontier.is_empty()):
         (path, node) = frontier.dequeue()

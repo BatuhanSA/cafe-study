@@ -15,7 +15,7 @@ class BFS(autograder.assignment.Assignment):
         input_dir = kwargs.get('input_dir', '.')
         super().__init__(
             questions = [
-                TC1(1, 'cycle', timeout=None),
+                TC1(1, 'Cycle', timeout = None),
             ],
             additional_data = {"input_dir": input_dir},
             **kwargs)
@@ -25,37 +25,37 @@ class TC1(autograder.question.Question):
         student_bfs = submission.__all__.BFS
         Node = submission.__all__.Node
 
-        root = Node("root")
-        child_1 = Node("child_1")
-        child_2 = Node("child_2")
-        grand_child = Node("grand_child")
-        goal = Node("goal")
+        S = Node("S")
+        A = Node("A")
+        B = Node("B")
+        C = Node("C")
+        G = Node("G")
 
-        root.neighbors.append(child_1)
-        child_1.neighbors.append(root)
+        S.neighbors.append(A)
+        A.neighbors.append(S)
 
-        root.neighbors.append(child_2)
-        child_2.neighbors.append(root)
+        S.neighbors.append(B)
+        B.neighbors.append(S)
 
-        child_1.neighbors.append(grand_child)
-        grand_child.neighbors.append(child_1)
+        A.neighbors.append(C)
+        C.neighbors.append(A)
 
-        child_2.neighbors.append(grand_child)
-        grand_child.neighbors.append(child_2)
+        B.neighbors.append(C)
+        C.neighbors.append(B)
 
-        grand_child.neighbors.append(goal)
-        goal.neighbors.append(grand_child)
+        C.neighbors.append(G)
+        G.neighbors.append(C)
 
         try:
             submission.__all__.Queue.nodes_expanded = 0
-            student_path = student_bfs(root, goal)
+            student_path = student_bfs(S, G)
         except NotImplementedError:
             self.fail('NotImplementedError')
 
         expected_expanded_count = 4
         actual_expanded_count = submission.__all__.Queue.nodes_expanded
 
-        if (actual_expanded_count == expected_expanded_count  and student_path == ["root", "child_1", "grand_child", "goal"]):
+        if (actual_expanded_count == expected_expanded_count  and student_path == ["S", "A", "C", "G"]):
             self.full_credit()
         else:
             feedback = f"Wrong number of nodes expanded.\n"

@@ -2,19 +2,19 @@
 
 A debugging task for the CAFE proto-study.
 The participants are given a buggy implementation of Breadth First Search (BFS).
-They debug it so that it passes the test case(s).
+They debug it so that it passes the test case.
 
 ## Overview
 
 The file [src/main.py](./src/main.py) contains an implementation of BFS over an undirected graph.
-It does not currently produce the expected result.
-Your task is to find and fix the bug so the submission passes the test case(s).
+It does not currently pass the test case.
+Your task is to find and fix the bug so the submission passes the test case.
 
 ## Files
 
 | File/Directory                 | Purpose                                                         |
-|:------------------------------:|:--------------------------------------------------------------- |
-| `src/main.py`                  | The code you edit. Contains `Node`, `Queue`, and `BFS`.         |
+|:------------------------------ |:--------------------------------------------------------------- |
+| `src/main.py`                  | The code you edit.                                              |
 | `grader.py`                    | Autograder assignment/question definitions. **Do not look.**    |
 | `assignment_control.json`      | Assignment config for the control (no-CAFE) run.                |
 | `assignment_experimental.json` | Assignment config for the experimental (CAFE) run.              |
@@ -29,19 +29,29 @@ Breadth First Search (BFS) is a graph traversal algorithm that explores nodes le
 It first visits the source, then all nodes one edge away, then all nodes two edges away, and so on.
 It uses a queue (FIFO) to decide which node to expand next.
 
-Depending on the source consulted, the definition of an expanded node can vary.
+Depending on the source, the definition of an expanded node can vary.
 For the purposes of this proto-study, we consider a node to be expanded when it is removed from the queue and its neighbors are examined.
 
-Because BFS expands nodes in increasing order of their distance from the source,
-the first time it reaches the goal, it has found a path containing the fewest possible edges.
+Because BFS explores nodes in order of distance from the source, the first time it reaches the goal it has found a path with the fewest edges.
 In an unweighted graph, this is a shortest path.
 (The path itself is recovered by storing a parent pointer for each node as it is discovered,
 then following those pointers back from the goal to the source.)
 
+## Example
+
+Graph used by the autograder (all edges undirected):
+![](./images/bfs_exmaple_graph.png)
+
+
+```
+Input:  BFS(S, G)
+Output: [S, A, C, G]
+```
+
 ### Input/Output
 
 - **Input**
-  - `initial_node`: The `Node` to start the search from.
+  - `start_node`: The `Node` to start the search from.
   - `goal_node`: The `Node` to search for.
 
 - **Output**
@@ -55,13 +65,16 @@ Each grading run logs a numbered attempt (submission copy + output log) under `a
 
 **Follow the instructions for your assigned group only.**
 
+NOTE: To keep both implementations simple, we did not include a fail-safe for infinite loops.
+If your code takes unusually long to finish after submission, it may be stuck in an infinite loop. You can press Ctrl+C to stop it.
+
 ### Control group (without CAFE)
 
 ```bash
 ./grade_control.sh
 ```
 
-When ever you want to submit to the grader you can run the `grade_contorl.sh` script.
+When ever you want to submit an attempt you can run the `grade_contorl.sh` script.
 It will grade your current `src/main.py` and print autograder feedback.
 
 ### Experimental group (with CAFE)
@@ -74,12 +87,13 @@ CAFE will use this file later so make sure you run this command.
 ./setup.sh
 ```
 
-When ever you want to submit to the grader you can run the `grade_experimental.sh` script.
+When ever you want to submit an attempt you can run the `grade_experimental.sh` script.
 It will grade your current `src/main.py` and print autograder feedback and CAFE feedback.
 
 ```bash
 ./grade_experimental.sh
 ```
+Note: The experimental run will take a little longer than usual due to profiling overhead. Thank you for your patience.
 
 ### After You're Done
 

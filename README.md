@@ -19,7 +19,7 @@ This proto-study needs a Unix-like (POSIX) command line:
 ### Python
 
 In this proto-study, we will be using Python (version >= 3.10).
-If you don't already have Python installed or need to upgrade it,
+If you do not already have Python installed or need to upgrade it,
 instructions for your OS can be found [here](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 To check your already installed Python version, use:
@@ -30,7 +30,8 @@ python3 -V
 ### Virtual Environments
 
 In this proto-study, we will be using the [standard venv tool](https://docs.python.org/3/library/venv.html) distributed with Python.
-(You're welcome to use other tools, though our ability to help may be limited depending on how familiar we are with them. We'll do our best either way.)
+(You are welcome to use other tools, though our ability to help may be limited depending on how familiar we are with them.
+We will do our best either way.)
 [This guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
 covers how to create an use venvs, we will reiterate the steps here.
 Refer to the linked guide for the exact commands.)
@@ -71,7 +72,7 @@ Just point to the file if you are somewhere else
 (e.g., use `../requirements.txt` if you are in this assignment's directory).
 
 You may choose to use another packaging system instead of pip (like Conda),
-though we can't promise the same level of help if we're not familiar with it. We'll do what we can.
+though we can not promise the same level of help if we are not familiar with it. We will do what we can.
 
 ## CAFE
 
@@ -129,13 +130,13 @@ Zip the `attempts` folder for both questions and send it to <cafe.userstudy@gmai
 ### Qualitative
 
 We will collect qualitative feedback via a Google Form.
-Please fill out this form **after** you've sent the quantitative deliverables.
+Please fill out the form **after** you have sent the quantitative deliverables.
 
-Link to the Google Form: TODO(Batu): Add the link to the survey (Google Form)
+The link to the Google Form will be give during the proto-study.
 
 ## Restrictions
 
-To keep the results accurate, please don't use:
+To keep the results accurate, please do not use:
 
 - **LLMs / Code Assistant Tools**:
     This includes ChatGPT, Claude, Gemini, GitHub Copilot, Cursor, or any AI Chat/Autocomplete Tool.
@@ -151,9 +152,9 @@ To keep the results accurate, please don't use:
 
 - **Solution / Test Cases Inspection**:
     This study runs on the honor system.
-    If you look around the directories, you'll find the reference solutions and test cases.
+    If you look around the directories, you will find the reference solutions and test cases.
     They are not hidden and they are not hard to find.
-    We're treating you as a collaborator, not an adversary, so we are asking you not to use them.
+    We are treating you as a collaborator, not an adversary, so we are asking you not to use them.
     *Why: It defeats the point of the study and invalidates CAFE's feedback*
 
 - **Editing Study Resources**:

@@ -79,10 +79,6 @@ It will grade your current `src/main.py` and print autograder feedback and CAFE 
 
 Note: The experimental run will take a little longer than usual due to profiling overhead. Thank you for your patience.
 
-### After You're Done
-
-- TODO(Batu): Provide a script to zip the `attempts` directory, or write manual zip instructions.
-- TODO(Batu): Add the email address for participants to send the zip to.
 ## Requirements
 
 - Python >= 3.10

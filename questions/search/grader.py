@@ -22,7 +22,7 @@ class BFS(autograder.assignment.Assignment):
 
 class TC1(autograder.question.Question):
     def score_question(self, submission, input_dir):
-        student_bfs = submission.__all__.BFS
+        student_bfs = submission.__all__.breadth_first_search
         Node = submission.__all__.Node
 
         S = Node("S")

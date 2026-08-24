@@ -39,6 +39,8 @@ In an unweighted graph, this is a shortest path.
 (The path itself is recovered by storing a parent pointer for each node as it is discovered,
 then following those pointers back from the goal to the source.)
 
+Only modify the section marked with `TODO` in the [src/main.py](./src/main.py).
+
 ## Example
 
 Graph used by the autograder (all edges undirected):
@@ -47,15 +49,6 @@ Graph used by the autograder (all edges undirected):
 Input:  BFS(S, G)
 Output: [S, A, C, G]
 ```
-
-### Input/Output
-
-- Input
-  - `start_node`: The `Node` to start the search from.
-  - `goal_node`: The `Node` to search for.
-
-- Output
-  - A list of node **labels** describing the path from the start to the goal, inclusive of both start and end nodes.
 
 ## Submitting an Attempt
 

@@ -1,3 +1,0 @@
-[submodule "packages/cafe"]
-	path = packages/cafe
-	url = https://github.com/aiea-lab/CAFE

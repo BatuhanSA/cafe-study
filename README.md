@@ -111,9 +111,27 @@ We expect these biases to average out across the groups.
 
 ## Deliverables
 
-- TODO(Batu): Add what we are going to collect form the participants.
-- TODO(Batu): Add email to send to.
-- TODO(Batu): Add the link to the survey (google form)
+### Quantitative
+
+We will collect the `attempts` folder from both questions.
+The `attempts` folder contains every attempt that was submitted for grading.
+
+For each attempt, we collect:
+- The logs (`output.log`)
+- A copy of the code for that submission (`main.py`)
+- The autograder response (`info.json`)
+
+Zip the `attempts` folder for both questions and send it to <cafe.userstudy@gmail.com>.
+
+- Name the sort zip `sort_attempts.zip`
+- Name the search zip `search_attempts.zip`
+
+### Qualitative
+
+We will collect qualitative feedback via a Google Form.
+Please fill out this form **after** you've sent the quantitative deliverables.
+
+Link to the Google Form: TODO(Batu): Add the link to the survey (Google Form)
 
 ## Restrictions
 

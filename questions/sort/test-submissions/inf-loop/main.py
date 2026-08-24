@@ -30,14 +30,6 @@ class TrackedList:
     # TODO(participant): Debugg the code bellow.
     def bubble_sort(self) -> None:
 
-        swapped = True
-        while swapped:
-            swapped = False
-            for i in range(len(self.data) - 1):
-                j = i + 1
-                if (self.comp(self.data[i], self.data[j])):
-                    swapped = True
-                    aux = self.data[i]
-                    self.data[i] = self.data[j]
-                    self.data[j] = aux
-        return
+        while True:
+            pass
+

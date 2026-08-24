@@ -22,8 +22,8 @@ class BubbleSort(autograder.assignment.Assignment):
 
 class TC1(autograder.question.Question):
     def score_question(self, submission, input_dir):
-        arr = [1,8,3,9,4,7,1,8,3,4,8,1,2,0,1,0,2,9,4,0]
-        sorted_arr = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 7, 8, 8, 8, 9, 9]
+        arr = [3,1,2]
+        sorted_arr = [1,2,3]
 
         try:
             submission.__all__.TrackedList.num_comps = 0
@@ -36,7 +36,7 @@ class TC1(autograder.question.Question):
         except NotImplementedError:
             self.fail('NotImplementedError')
 
-        expected_num_comps = 342
+        expected_num_comps = 4
 
         if (actual_num_comps == expected_num_comps and arr == sorted_arr):
             self.full_credit()

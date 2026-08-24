@@ -27,10 +27,12 @@ Your task is to find and fix the bug so the submission passes the test case.
 
 Breadth First Search (BFS) is a graph traversal algorithm that explores nodes level by level, starting from a source node.
 It first visits the source, then all nodes one edge away, then all nodes two edges away, and so on.
-It uses a queue (FIFO) to decide which node to expand next.
+BFS uses a FIFO queue to decide which node to expand next.
+In the case of a tie between nodes, we break the tie alphabetically.
 
 Depending on the source, the definition of an expanded node can vary.
-For the purposes of this proto-study, we consider a node to be expanded when it is removed from the queue and its neighbors are examined.
+The definition of an expanded node varies across sources.
+For this proto-study, we consider a node expanded when it is removed from the queue and its neighbors are examined.
 
 Because BFS explores nodes in order of distance from the source, the first time it reaches the goal it has found a path with the fewest edges.
 In an unweighted graph, this is a shortest path.
@@ -41,8 +43,6 @@ then following those pointers back from the goal to the source.)
 
 Graph used by the autograder (all edges undirected):
 ![](./images/bfs_exmaple_graph.png)
-
-
 ```
 Input:  BFS(S, G)
 Output: [S, A, C, G]
@@ -50,11 +50,11 @@ Output: [S, A, C, G]
 
 ### Input/Output
 
-- **Input**
+- Input
   - `start_node`: The `Node` to start the search from.
   - `goal_node`: The `Node` to search for.
 
-- **Output**
+- Output
   - A list of node **labels** describing the path from the start to the goal, inclusive of both start and end nodes.
 
 ## Submitting an Attempt

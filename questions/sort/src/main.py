@@ -28,6 +28,8 @@ class TrackedList:
         return self.num_comps
 
     # TODO(participant): Debugg the code bellow.
+    # DO NOT add a call to self.comp() here.
+    # We track the comparison count, and an extra call would inflate it.
     def bubble_sort(self) -> None:
 
         for _ in range(len(self.data)):

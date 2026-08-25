@@ -20,7 +20,7 @@ Your task is to find and fix the bug so the submission passes the test case.
 | `assignment_experimental.json` | Assignment config for the experimental (CAFE) run.              |
 | `setup.sh`                     | Generates the solution profile used by CAFE.                    |
 | `grade_control.sh`             | Grades your submission without CAFE feedback.                   |
-| `grade_experimental.sh`        | Grades your submission with CAFE feedback enabled.              |
+| `grade_cafe.sh`                | Grades your submission with CAFE feedback enabled.              |
 | `test-submissions/`            | Reference submissions **Do not look.**                          |
 
 ## Problem
@@ -80,11 +80,11 @@ CAFE will use this file later so make sure you run this command.
 ./setup.sh
 ```
 
-When ever you want to submit an attempt you can run the `grade_experimental.sh` script.
+When ever you want to submit an attempt you can run the `grade_cafe.sh` script.
 It will grade your current `src/main.py` and print autograder feedback and CAFE feedback.
 
 ```bash
-./grade_experimental.sh
+./grade_cafe.sh
 ```
 Note: The experimental run will take a little longer than usual due to profiling overhead. Thank you for your patience.
 

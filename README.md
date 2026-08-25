@@ -13,8 +13,8 @@ It integrates with the EduLinq's [Lynx Grader](https://github.com/edulinq/autogr
 
 This proto-study needs a Unix-like (POSIX) command line:
 
-- **Mac / Linux**: Use your built-in terminal.
-- **Windows**: Use WSL (Windows Subsystem for Linux), not Command Prompt or PowerShell
+- Mac / Linux: Use your built-in terminal.
+- Windows: Use WSL (Windows Subsystem for Linux), not Command Prompt or PowerShell
 
 ### Python
 
@@ -105,7 +105,6 @@ Someone who starts on search without CAFE will move to sort with CAFE, and so on
 | 3     | Sort & No CAFE    | Search & CAFE     |
 | 4     | Sort & CAFE       | Search & No CAFE  |
 
-
 These four groups cover every permutation of starting task and starting setup.
 This counterbalancing lets us account for biases such as order effects and differences in task difficulty.
 We expect these biases to average out across the groups.
@@ -115,24 +114,34 @@ We expect these biases to average out across the groups.
 ### Quantitative
 
 We will collect the `attempts` folder from both questions.
-The `attempts` folder contains every attempt that was submitted for grading.
+Zip the `attempts` folder for each question and send both files to
+[cafe.userstudy@gmail.com](mailto:cafe.userstudy@gmail.com).
 
-For each attempt, we collect:
-- The logs (`output.log`)
-- A copy of the code for that submission (`main.py`)
-- The autograder response (`info.json`)
+Name the zip files as follows:
 
-Zip the `attempts` folder for both questions and send it to <cafe.userstudy@gmail.com>.
+- Search question: `search_attempts.zip`
+- Sort question: `sort_attempts.zip`
 
-- Name the sort zip `sort_attempts.zip`
-- Name the search zip `search_attempts.zip`
+If you have zip utilities installed, the commands should look as follows:
+
+Navigate to the `questions/search` directory and run:
+
+```sh
+zip -r search_attempts.zip attempts/
+```
+
+Navigate to the `questions/sort` directory and run:
+
+```sh
+zip -r sort_attempts.zip attempts/
+```
 
 ### Qualitative
 
 We will collect qualitative feedback via a Google Form.
 Please fill out the form **after** you have sent the quantitative deliverables.
 
-The link to the Google Form will be give during the proto-study.
+The link to the Google form will be give during the proto-study.
 
 ## Restrictions
 

@@ -30,7 +30,6 @@ It first visits the source, then all nodes one edge away, then all nodes two edg
 BFS uses a FIFO queue to decide which node to expand next.
 In the case of a tie between nodes, we break the tie alphabetically.
 
-Depending on the source, the definition of an expanded node can vary.
 The definition of an expanded node varies across sources.
 For this proto-study, we consider a node expanded when it is removed from the queue and its neighbors are examined.
 
